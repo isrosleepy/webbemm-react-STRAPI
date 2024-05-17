@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "isi_biros",
+  "info": {
+    "singularName": "isi-biro",
+    "pluralName": "isi-biros",
+    "displayName": "IsiBiros"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namaBiro": {
+      "type": "string"
+    },
+    "kepanjanganBiro": {
+      "type": "string"
+    },
+    "pengertianBiro": {
+      "type": "text"
+    },
+    "jargonBiro": {
+      "type": "string"
+    },
+    "jumlahProker": {
+      "type": "integer"
+    },
+    "jumlahProkerTerlaksana": {
+      "type": "integer"
+    },
+    "fotoBiro": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "logoBiro": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "tupoksiVisiMisiBiro": {
+      "type": "richtext"
+    },
+    "programKerjaBiro": {
+      "type": "richtext"
+    },
+    "kemenbiro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kemenbiro.kemenbiro"
+    }
+  }
+}

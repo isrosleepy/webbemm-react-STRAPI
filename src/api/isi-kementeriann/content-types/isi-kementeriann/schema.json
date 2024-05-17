@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "isi_kementerianns",
+  "info": {
+    "singularName": "isi-kementeriann",
+    "pluralName": "isi-kementerianns",
+    "displayName": "IsiKementerianns"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namaKementerian": {
+      "type": "string"
+    },
+    "kepanjanganKementerian": {
+      "type": "string"
+    },
+    "pengertianKementerian": {
+      "type": "text"
+    },
+    "jargonKementerian": {
+      "type": "string"
+    },
+    "jumlahProker": {
+      "type": "integer"
+    },
+    "jumlahProkerTerlaksana": {
+      "type": "integer"
+    },
+    "fotoKementerian": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "logoKementerian": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "visiKementerian": {
+      "type": "text"
+    },
+    "misiKementerian": {
+      "type": "richtext"
+    },
+    "programKerjaKementerian": {
+      "type": "richtext"
+    },
+    "kemenbiro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kemenbiro.kemenbiro"
+    }
+  }
+}

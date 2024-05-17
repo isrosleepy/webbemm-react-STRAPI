@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "staff_bems",
+  "info": {
+    "singularName": "staff-bem",
+    "pluralName": "staff-bems",
+    "displayName": "StaffBems"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "jabatan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::jabatan.jabatan"
+    },
+    "kemenbiro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kemenbiro.kemenbiro"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kemenbiros",
+  "info": {
+    "singularName": "kemenbiro",
+    "pluralName": "kemenbiros",
+    "displayName": "Kemenbiros",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kemenbiro": {
+      "type": "string",
+      "required": true
+    },
+    "artikels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artikel.artikel",
+      "mappedBy": "kemenbiros"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coba_yaas",
+  "info": {
+    "singularName": "coba-yaa",
+    "pluralName": "coba-yaas",
+    "displayName": "CobaYaas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "sebagai": {
+      "type": "string"
+    },
+    "keterangan": {
+      "type": "text"
+    },
+    "linkInstagram": {
+      "type": "string"
+    },
+    "imgAvatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "jabatan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::jabatan.jabatan"
+    },
+    "kemenbiro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kemenbiro.kemenbiro"
+    }
+  }
+}

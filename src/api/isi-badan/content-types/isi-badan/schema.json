@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "isi_badans",
+  "info": {
+    "singularName": "isi-badan",
+    "pluralName": "isi-badans",
+    "displayName": "IsiBadans",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namaBadan": {
+      "type": "string"
+    },
+    "kepanjanganBadan": {
+      "type": "string"
+    },
+    "pengertianBadan": {
+      "type": "text"
+    },
+    "jargonBadan": {
+      "type": "string"
+    },
+    "jumlahProker": {
+      "type": "integer"
+    },
+    "jumlahProkerTerlaksana": {
+      "type": "integer"
+    },
+    "fotoBadan": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logoBadan": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "visiBadan": {
+      "type": "text"
+    },
+    "misiBadan": {
+      "type": "richtext"
+    },
+    "programKerjaBadan": {
+      "type": "richtext"
+    },
+    "kemenbiro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kemenbiro.kemenbiro"
+    },
+    "tupoksiVisiMisiBadan": {
+      "type": "richtext"
+    }
+  }
+}

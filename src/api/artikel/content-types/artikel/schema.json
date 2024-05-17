@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artikels",
+  "info": {
+    "singularName": "artikel",
+    "pluralName": "artikels",
+    "displayName": "Artikels",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "artikelTitle": {
+      "type": "string",
+      "required": true
+    },
+    "coverImg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "artikelDesc": {
+      "type": "text",
+      "minLength": 81,
+      "required": true
+    },
+    "kemenbiros": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kemenbiro.kemenbiro",
+      "inversedBy": "artikels"
+    },
+    "altCover": {
+      "type": "string"
+    },
+    "artikelContent": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
