@@ -832,50 +832,6 @@ export interface ApiArtikelArtikel extends Schema.CollectionType {
   };
 }
 
-export interface ApiCobaYaaCobaYaa extends Schema.CollectionType {
-  collectionName: 'coba_yaas';
-  info: {
-    singularName: 'coba-yaa';
-    pluralName: 'coba-yaas';
-    displayName: 'CobaYaas';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    nama: Attribute.String;
-    sebagai: Attribute.String;
-    keterangan: Attribute.Text;
-    linkInstagram: Attribute.String;
-    imgAvatar: Attribute.Media;
-    jabatan: Attribute.Relation<
-      'api::coba-yaa.coba-yaa',
-      'oneToOne',
-      'api::jabatan.jabatan'
-    >;
-    kemenbiro: Attribute.Relation<
-      'api::coba-yaa.coba-yaa',
-      'oneToOne',
-      'api::kemenbiro.kemenbiro'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::coba-yaa.coba-yaa',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::coba-yaa.coba-yaa',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiIsiBadanIsiBadan extends Schema.CollectionType {
   collectionName: 'isi_badans';
   info: {
@@ -1217,7 +1173,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::artikel.artikel': ApiArtikelArtikel;
-      'api::coba-yaa.coba-yaa': ApiCobaYaaCobaYaa;
       'api::isi-badan.isi-badan': ApiIsiBadanIsiBadan;
       'api::isi-biro.isi-biro': ApiIsiBiroIsiBiro;
       'api::isi-kementeriann.isi-kementeriann': ApiIsiKementeriannIsiKementeriann;
